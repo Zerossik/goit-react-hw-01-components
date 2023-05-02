@@ -18,29 +18,29 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <ProfileComponent className="profile">
-      <Description className="description">
+    <ProfileComponent>
+      <Description>
         <Avatar
           src={avatar ? avatar : ImgAvatar}
           alt="User avatar"
           className="avatar"
         />
-        <Username className="name">{username}</Username>
-        <PrimeryText className="tag">@{tag}</PrimeryText>
-        <PrimeryText className="location">{location}</PrimeryText>
+        <Username>{username}</Username>
+        <PrimeryText>@{tag}</PrimeryText>
+        <PrimeryText>{location}</PrimeryText>
       </Description>
       <StatsList>
         <StatsItem>
-          <StatsText className="label">Followers</StatsText>
-          <span className="quantity">{followers}</span>
+          <StatsText>Followers</StatsText>
+          <span>{followers}</span>
         </StatsItem>
         <StatsItem>
-          <StatsText className="label">Views</StatsText>
-          <span className="quantity">{views}</span>
+          <StatsText>Views</StatsText>
+          <span>{views}</span>
         </StatsItem>
         <StatsItem>
-          <StatsText className="label">Likes</StatsText>
-          <span className="quantity">{likes}</span>
+          <StatsText>Likes</StatsText>
+          <span>{likes}</span>
         </StatsItem>
       </StatsList>
     </ProfileComponent>

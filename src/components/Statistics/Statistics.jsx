@@ -10,15 +10,13 @@ import PropTypes from 'prop-types';
 
 export default function Statistics({ title, stats }) {
   return (
-    <WrapContainer className="statistics">
-      {title && <StatsTitle className="title">{title}</StatsTitle>}
-      <StatsList className="stat-list">
+    <WrapContainer>
+      {title && <StatsTitle>{title}</StatsTitle>}
+      <StatsList>
         {stats.map(el => (
-          <StatsItem key={el.id} className="item">
-            <span className="label">{el.label}</span>
-            <StatsPercentage className="percentage">
-              {el.percentage}%
-            </StatsPercentage>
+          <StatsItem key={el.id}>
+            <span>{el.label}</span>
+            <StatsPercentage>{el.percentage}%</StatsPercentage>
           </StatsItem>
         ))}
       </StatsList>

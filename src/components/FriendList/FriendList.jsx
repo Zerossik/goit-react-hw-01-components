@@ -9,7 +9,7 @@ import {
 
 export default function FriendsElement({ friends }) {
   return (
-    <FriendList className="friend-list">
+    <FriendList>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <FriendCard key={id}>
           <FriendStatus

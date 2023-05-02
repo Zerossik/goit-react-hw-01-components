@@ -7,7 +7,7 @@ import {
 } from './TransactionHistory.styled';
 export default function TransactionHistory({ items }) {
   return (
-    <TransactionTable className="transaction-history">
+    <TransactionTable>
       <thead>
         <tr>
           <TransactionHead>Type</TransactionHead>
