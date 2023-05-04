@@ -8,19 +8,7 @@ import {
 } from './FriendList.styled';
 
 export default function FriendsElement({ friends }) {
-  return (
-    <FriendList>
-      {friends.map(({ id, avatar, name, isOnline }) => (
-        <FriendCard key={id}>
-          <FriendStatus
-            style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-          ></FriendStatus>
-          <FriendAvatar src={avatar} alt={name} />
-          <FriendName>{name}</FriendName>
-        </FriendCard>
-      ))}
-    </FriendList>
-  );
+  return <FriendList />;
 }
 
 FriendsElement.propTypes = {
