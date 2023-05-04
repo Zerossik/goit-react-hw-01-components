@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import {
   FriendAvatar,
   FriendCard,
   FriendStatus,
   FriendName,
-} from '../FriendList/FriendList.styled';
+} from './FriendListItem.styled';
 
 export default function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <FriendCard key={id}>
+    <FriendCard>
       <FriendStatus
         style={{ backgroundColor: isOnline ? 'green' : 'red' }}
       ></FriendStatus>
@@ -16,3 +17,8 @@ export default function FriendListItem({ avatar, name, isOnline }) {
     </FriendCard>
   );
 }
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};
