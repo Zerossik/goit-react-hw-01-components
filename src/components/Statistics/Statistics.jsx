@@ -13,10 +13,10 @@ export default function Statistics({ title, stats }) {
     <WrapContainer>
       {title && <StatsTitle>{title}</StatsTitle>}
       <StatsList>
-        {stats.map(el => (
-          <StatsItem key={el.id}>
-            <span>{el.label}</span>
-            <StatsPercentage>{el.percentage}%</StatsPercentage>
+        {stats.map(({ id, label, percentage }) => (
+          <StatsItem key={id}>
+            <span>{label}</span>
+            <StatsPercentage>{percentage}%</StatsPercentage>
           </StatsItem>
         ))}
       </StatsList>
@@ -31,6 +31,6 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };
