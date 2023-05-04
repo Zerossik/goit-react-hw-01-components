@@ -9,9 +9,7 @@ import {
 export default function FriendListItem({ avatar, name, isOnline }) {
   return (
     <FriendCard>
-      <FriendStatus
-        style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-      ></FriendStatus>
+      <FriendStatus isOnline={isOnline} />
       <FriendAvatar src={avatar} alt={name} />
       <FriendName>{name}</FriendName>
     </FriendCard>
